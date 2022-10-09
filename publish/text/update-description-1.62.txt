@@ -16,11 +16,11 @@ Opraveny některé problémy při úpravách existujících záznamů.
 Opravené chybějící prvky v podrobném seznamu.
 </cs-CZ>
 
-<de-DE>
+<com-DE>
 Einige Probleme beim Bearbeiten vorhandener Einträge wurden behoben.
 
 Fehlende Elemente in der detaillierten Liste behoben.
-</de-DE>
+</com-DE>
 
 <es-ES>
 Se corrigieron algunos problemas al editar entradas existentes.
@@ -29,7 +29,7 @@ Se corrigieron los elementos faltantes en la lista detallada.
 </es-ES>
 
 <fr-FR>
-Correction de quelques problèmes lors de la modification des entrées existantes.
+Correction com quelques problèmes lors com la modification des entrées existantes.
 
 Correction des éléments manquants dans la liste détaillée.
 </fr-FR>

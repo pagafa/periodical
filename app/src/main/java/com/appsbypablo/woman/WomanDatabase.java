@@ -16,7 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.arnowelzel.android.periodical;
+package com.appsbypablo.woman;
 
 import android.annotation.SuppressLint;
 
@@ -48,7 +48,7 @@ import static java.lang.String.*;
  * Database of the app
  */
 @SuppressLint("DefaultLocale")
-class PeriodicalDatabase {
+class WomanDatabase {
     public final Integer DEFAULT_PERIOD_LENGTH = 4;
     public final Integer DEFAULT_LUTEAL_LENGTH = 14;
     public final Integer DEFAULT_CYCLE_LENGTH = 183;
@@ -59,7 +59,7 @@ class PeriodicalDatabase {
     /**
      * Helper to create or open database
      */
-    private class PeriodicalDataOpenHelper extends SQLiteOpenHelper {
+    private class WomanDataOpenHelper extends SQLiteOpenHelper {
         /**
          * File name for the database
          */
@@ -74,7 +74,7 @@ class PeriodicalDatabase {
          *
          * @param context Application context
          */
-        PeriodicalDataOpenHelper(Context context) {
+        WomanDataOpenHelper(Context context) {
             super(context, DATABASE_NAME, null, DATABASE_VERSION);
         }
 
@@ -376,7 +376,7 @@ class PeriodicalDatabase {
      *
      * @param context Application context
      */
-    PeriodicalDatabase(Context context) {
+    WomanDatabase(Context context) {
         this.context = context;
         open();
 
@@ -388,8 +388,8 @@ class PeriodicalDatabase {
      */
     @SuppressLint("Recycle")
     private void open() {
-        PeriodicalDataOpenHelper dataOpenHelper;
-        dataOpenHelper = new PeriodicalDataOpenHelper(context);
+        WomanDataOpenHelper dataOpenHelper;
+        dataOpenHelper = new WomanDataOpenHelper(context);
         db = dataOpenHelper.getWritableDatabase();
         assert db != null;
     }

@@ -16,7 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.arnowelzel.android.periodical;
+package com.appsbypablo.woman;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;

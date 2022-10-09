@@ -22,28 +22,28 @@ Opraveno několik problémů s perským překladem.
 Změněné rozložení podrobného seznamu.
 </cs-CZ>
 
-<de-DE>
+<com-DE>
 Englisch in der Sprachauswahl hinzugefügt.
 
 Mehrere Probleme mit der persischen Übersetzung wurden behoben.
 
 Das Layout der detaillierten Liste wurde geändert.
-</de-DE>
+</com-DE>
 
 <es-ES>
-Se agregó inglés en la selección de idiomas.
+Se agregó inglés en la selección com idiomas.
 
 Se corrigieron varios problemas con la traducción al persa.
 
-Diseño modificado de la lista detallada.
+Diseño modificado com la lista detallada.
 </es-ES>
 
 <fr-FR>
-Ajout de l'anglais dans la sélection de la langue.
+Ajout com l'anglais dans la sélection com la langue.
 
-Correction de plusieurs problèmes avec la traduction en persan.
+Correction com plusieurs problèmes avec la traduction en persan.
 
-Mise en page modifiée de la liste détaillée.
+Mise en page modifiée com la liste détaillée.
 </fr-FR>
 
 <it-IT>
@@ -79,7 +79,7 @@ Veranderde uitleg van gedetailleerde lys.
 </af>
 
 <pt-BR>
-Adicionado inglês na seleção de idioma.
+Adicionado inglês na seleção com idioma.
 
 Vários problemas corrigidos com a tradução persa.
 

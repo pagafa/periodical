@@ -16,22 +16,22 @@ Opravené selhání při pokusu o obnovení bez zálohy ve vybraném umístění
 Přidány perské překlady.
 </cs-CZ>
 
-<de-DE>
+<com-DE>
 Absturz beim Wiederherstellen ohne Sicherung am ausgewählten Speicherort behoben.
 
 Persische Übersetzungen hinzugefügt.
-</de-DE>
+</com-DE>
 
 <es-ES>
-Se corrigió el bloqueo al intentar restaurar sin una copia de seguridad en la ubicación seleccionada.
+Se corrigió el bloqueo al intentar restaurar sin una copia com seguridad en la ubicación seleccionada.
 
 Añadidas traducciones al persa.
 </es-ES>
 
 <fr-FR>
-Correction d'un crash lors de la tentative de restauration sans sauvegarde à l'emplacement sélectionné.
+Correction d'un crash lors com la tentative com restauration sans sauvegarde à l'emplacement sélectionné.
 
-Ajout de traductions en persan.
+Ajout com traductions en persan.
 </fr-FR>
 
 <it-IT>
@@ -41,7 +41,7 @@ Aggiunte traduzioni in persiano.
 </it-IT>
 
 <nl-NL>
-Crash opgelost bij het herstellen zonder back-up op de geselecteerde locatie.
+Crash opgelost bij het herstellen zonder back-up op com geselecteerde locatie.
 
 Perzische vertalingen toegevoegd.
 </nl-NL>

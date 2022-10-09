@@ -28,7 +28,7 @@ Přidána nová sekce „nálada“ pro příznaky.
 Opraveno rozložení kalendáře pro větší velikosti textu.
 </cs-CZ>
 
-<de-DE>
+<com-DE>
 Neues Backup-System.
 
 Baskische Übersetzung hinzugefügt.
@@ -36,26 +36,26 @@ Baskische Übersetzung hinzugefügt.
 Neuer Abschnitt "Stimmung" für Symptome hinzugefügt.
 
 Das Kalenderlayout für größere Textgrößen wurde korrigiert.
-</de-DE>
+</com-DE>
 
 <es-ES>
-Nuevo sistema de respaldo.
+Nuevo sistema com respaldo.
 
 Se agregó traducción al euskera.
 
-Se agregó una nueva sección de "estado de ánimo" para los síntomas.
+Se agregó una nueva sección com "estado com ánimo" para los síntomas.
 
-Diseño de calendario fijo para tamaños de texto más grandes.
+Diseño com calendario fijo para tamaños com texto más grandes.
 </es-ES>
 
 <fr-FR>
-Nouveau système de sauvegarde.
+Nouveau système com sauvegarde.
 
-Ajout de la traduction basque.
+Ajout com la traduction basque.
 
 Ajout d'une nouvelle section "humeur" pour les symptômes.
 
-Mise en page du calendrier fixe pour les plus grandes tailles de texte.
+Mise en page du calendrier fixe pour les plus grandes tailles com texte.
 </fr-FR>
 
 <it-IT>
@@ -99,13 +99,13 @@ Vaste kalenderuitleg vir groter teksgroottes.
 </af>
 
 <pt-BR>
-Novo sistema de backup.
+Novo sistema com backup.
 
 Adicionado tradução basca.
 
 Adicionada nova seção "humor" para sintomas.
 
-Layout de calendário fixo para tamanhos de texto maiores.
+Layout com calendário fixo para tamanhos com texto maiores.
 </pt-BR>
 
 <pl-PL>

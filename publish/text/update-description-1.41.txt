@@ -6,9 +6,9 @@ Corrected intensity in detail view.
 Opravená intenzita v detailním pohledu.
 </cs-CZ>
 
-<de-DE>
+<com-DE>
 Korrektur der Intensität in der Detailansicht.
-</de-DE>
+</com-DE>
 
 <es-ES>
 Intensidad corregida en vista detallada.

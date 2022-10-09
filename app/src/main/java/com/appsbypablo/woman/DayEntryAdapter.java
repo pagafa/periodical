@@ -16,7 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.arnowelzel.android.periodical;
+package com.appsbypablo.woman;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -37,9 +37,9 @@ import static java.lang.String.*;
 /**
  * Custom adapter to populate calendar entry list items
  */
-class DayEntryAdapter extends ArrayAdapter<PeriodicalDatabase.DayEntry> {
+class DayEntryAdapter extends ArrayAdapter<WomanDatabase.DayEntry> {
     private final Context context;
-    private final List<PeriodicalDatabase.DayEntry> entryList;
+    private final List<WomanDatabase.DayEntry> entryList;
     private final String packageName;
     private final Resources resources;
 
@@ -51,7 +51,7 @@ class DayEntryAdapter extends ArrayAdapter<PeriodicalDatabase.DayEntry> {
      * @param packageName Application package from getPackageName()
      * @param resources   Global resources from getResources()
      */
-    public DayEntryAdapter(Context context, List<PeriodicalDatabase.DayEntry> list, String packageName, Resources resources) {
+    public DayEntryAdapter(Context context, List<WomanDatabase.DayEntry> list, String packageName, Resources resources) {
         super(context, 0, list);
 
         this.context = context;
@@ -76,7 +76,7 @@ class DayEntryAdapter extends ArrayAdapter<PeriodicalDatabase.DayEntry> {
         if (listItem == null)
             listItem = LayoutInflater.from(context).inflate(R.layout.listdetailsitem, parent, false);
 
-        PeriodicalDatabase.DayEntry currentEntry = entryList.get(position);
+        WomanDatabase.DayEntry currentEntry = entryList.get(position);
 
         StringBuilder textEvents = new StringBuilder();
         StringBuilder textMood = new StringBuilder();
@@ -136,12 +136,12 @@ class DayEntryAdapter extends ArrayAdapter<PeriodicalDatabase.DayEntry> {
 
         view = listItem.findViewById(R.id.item_date);
         switch (currentEntry.type) {
-            case PeriodicalDatabase.DayEntry.PERIOD_START:
+            case WomanDatabase.DayEntry.PERIOD_START:
                 view.setText(
                         dateFormat.format(currentEntry.date.getTime()) + " \u2014 " +
                                 resources.getString(R.string.event_periodstart));
                 break;
-            case PeriodicalDatabase.DayEntry.PERIOD_CONFIRMED:
+            case WomanDatabase.DayEntry.PERIOD_CONFIRMED:
                 view.setText(
                         dateFormat.format(currentEntry.date.getTime()) + " \u2014 " +
                                 format(
@@ -155,8 +155,8 @@ class DayEntryAdapter extends ArrayAdapter<PeriodicalDatabase.DayEntry> {
 
         View viewIntensity = listItem.findViewById(R.id.block_intensity);
         view = listItem.findViewById(R.id.item_intensity);
-        if (currentEntry.type == PeriodicalDatabase.DayEntry.PERIOD_START ||
-                currentEntry.type == PeriodicalDatabase.DayEntry.PERIOD_CONFIRMED) {
+        if (currentEntry.type == WomanDatabase.DayEntry.PERIOD_START ||
+                currentEntry.type == WomanDatabase.DayEntry.PERIOD_CONFIRMED) {
             String intensity = "?";
             switch (currentEntry.intensity) {
                 case 1:

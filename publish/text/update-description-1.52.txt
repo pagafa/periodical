@@ -10,16 +10,16 @@ Türk dilində əskik ekran düzəldildi.
 Opravený chybějící displej v turečtině.
 </cs-CZ>
 
-<de-DE>
+<com-DE>
 Fehlende Anzeige auf Türkisch behoben.
-</de-DE>
+</com-DE>
 
 <es-ES>
-Se corrigió la falta de visualización en turco.
+Se corrigió la falta com visualización en turco.
 </es-ES>
 
 <fr-FR>
-Correction de l'affichage manquant en turc.
+Correction com l'affichage manquant en turc.
 </fr-FR>
 
 <it-IT>
@@ -39,7 +39,7 @@ Ontbrekende vertoon in Turks reggestel.
 </af>
 
 <pt-BR>
-Corrigida a falta de exibição em turco.
+Corrigida a falta com exibição em turco.
 </pt-BR>
 
 <pl-PL>

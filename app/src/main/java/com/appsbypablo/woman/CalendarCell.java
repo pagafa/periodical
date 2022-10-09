@@ -16,12 +16,12 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.arnowelzel.android.periodical;
+package com.appsbypablo.woman;
 
 import android.annotation.SuppressLint;
 import android.text.format.DateUtils;
 
-import de.arnowelzel.android.periodical.PeriodicalDatabase.DayEntry;
+import com.appsbypablo.woman.WomanDatabase.DayEntry;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -234,7 +234,7 @@ public class CalendarCell extends Button {
         gradientFertilityFuture = makeCellGradient(0xff90CAF9, 0xff90CAF9);
         gradientInfertilePredicted = makeCellGradient(0xffffee58, 0xffffee58);
         gradientInfertileFuture = makeCellGradient(0xfffff59d, 0xfffff59d);
-        gradientEmpty = makeCellGradient(0xff757575, 0xff757575);
+        gradientEmpty = makeCellGradient(0xff959595, 0xff959595);
 
         // Overlays
         rectOverlay = new Rect();
@@ -306,7 +306,7 @@ public class CalendarCell extends Button {
             // If cell is pressed, then fill with solid color
             paintFocus.setStyle(Style.FILL);
             paintFocus.setColor(0xffff9e08);
-            canvas.drawRoundRect(rectCanvas, 3 * metrics.density, 3 * metrics.density, paintFocus);
+            canvas.drawRoundRect(rectCanvas, 10 * metrics.density, 10 * metrics.density, paintFocus);
             colorLabel = 0xde000000;
         } else {
             // normal state (or focused), then draw color
@@ -348,7 +348,7 @@ public class CalendarCell extends Button {
             paintBackground.setStyle(Style.FILL);
             paintBackground.setAntiAlias(true);
 
-            canvas.drawRoundRect(rectCanvas, 3 * metrics.density, 3 * metrics.density, paintBackground);
+            canvas.drawRoundRect(rectCanvas, 10 * metrics.density, 10 * metrics.density, paintBackground);
 
             // Draw period start indicator
             rectOverlay.set((int) (4 * metrics.density),
@@ -467,7 +467,7 @@ public class CalendarCell extends Button {
             paintFocus.setStyle(Style.STROKE);
             paintFocus.setStrokeWidth(4 * metrics.density);
             paintFocus.setColor(0xffff9e08);
-            canvas.drawRoundRect(rectCanvas, 3 * metrics.density, 3 * metrics.density, paintFocus);
+            canvas.drawRoundRect(rectCanvas, 10 * metrics.density, 10 * metrics.density, paintFocus);
         }
     }
 

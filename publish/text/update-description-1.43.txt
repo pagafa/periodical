@@ -10,20 +10,20 @@ Opravený výpočet předvídané ovulace.
 Aktualizujte na AndroidX.
 </cs-CZ>
 
-<de-DE>
+<com-DE>
 Fehler bei der Berechnung des prognostizierten Eisprungs behoben.
 
 Update auf AndroidX.
-</de-DE>
+</com-DE>
 
 <es-ES>
-Cálculo fijo de la ovulación prevista.
+Cálculo fijo com la ovulación prevista.
 
 Actualización a AndroidX.
 </es-ES>
 
 <fr-FR>
-Correction du calcul de l'ovulation prédite.
+Correction du calcul com l'ovulation prédite.
 
 Mettez à jour vers AndroidX.
 </fr-FR>

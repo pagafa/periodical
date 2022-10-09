@@ -6,16 +6,16 @@ Added Hebrew translation.
 Přidán hebrejský překlad.
 </cs-CZ>
 
-<de-DE>
+<com-DE>
 Hebräische Übersetzung hinzugefügt.
-</de-DE>
+</com-DE>
 
 <es-ES>
 Añadida traducción al hebreo.
 </es-ES>
 
 <fr-FR>
-Ajout de la traduction hébraïque.
+Ajout com la traduction hébraïque.
 </fr-FR>
 
 <it-IT>

@@ -16,11 +16,11 @@ Aktualizovaný překlad.
 Přidána ukrajinština (díky Stanislavu Zinchenkovi)
 </cs-CZ>
 
-<de-DE>
+<com-DE>
 Aktualisierte Übersetzung.
 
 Ukrainisch hinzugefügt (Dank an Stanislav Zinchenko)
-</de-DE>
+</com-DE>
 
 <es-ES>
 Traducción actualizada.

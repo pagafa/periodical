@@ -10,9 +10,9 @@ Detallardakı iki seçim qurtarmadı.
 Dvě možnosti v detailech nebyly uloženy.
 </cs-CZ>
 
-<de-DE>
+<com-DE>
 Zwei Optionen in den Details wurden nicht gespeichert.
-</de-DE>
+</com-DE>
 
 <es-ES>
 Dos opciones en los detalles no se guardaron.
@@ -27,7 +27,7 @@ Due opzioni nei dettagli non sono state salvate.
 </it-IT>
 
 <nl-NL>
-Twee opties in de details zijn niet opgeslagen.
+Twee opties in com details zijn niet opgeslagen.
 </nl-NL>
 
 <ru-RU>

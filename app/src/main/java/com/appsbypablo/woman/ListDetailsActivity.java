@@ -1,5 +1,5 @@
 /*
- * Periodical list activity
+ * Periodical list with details activity
  * Copyright (C) 2012-2020 Arno Welzel
  *
  * This code is free software: you can redistribute it and/or modify
@@ -16,35 +16,33 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.arnowelzel.android.periodical;
+package com.appsbypablo.woman;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.preference.PreferenceManager;
 import android.widget.ListView;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Iterator;
 
-import de.arnowelzel.android.periodical.PeriodicalDatabase.DayEntry;
+import com.appsbypablo.woman.WomanDatabase.DayEntry;
 
 /**
- * Activity to handle the "List" command
+ * Activity to handle the "List, details" command
  */
-public class ListActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
+public class ListDetailsActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
     /**
      * Database for calendar data
      */
-    private PeriodicalDatabase dbMain;
+    private WomanDatabase dbMain;
 
     /**
      * Called when activity starts
@@ -56,76 +54,29 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
         assert context != null;
         super.onCreate(savedInstanceState);
 
-        int maximumcyclelength;
-
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
-        try {
-            maximumcyclelength = Integer.parseInt(preferences.getString("maximum_cycle_length", "183"));
-        } catch (NumberFormatException e) {
-            maximumcyclelength = 183;
-        }
-
         // Set up database and string array for the list
-        dbMain = new PeriodicalDatabase(context);
-        dbMain.loadRawData();
+        dbMain = new WomanDatabase(context);
+        dbMain.loadRawDataWithDetails();
 
-        String[] entries = new String[dbMain.dayEntries.size()];
-        java.text.DateFormat dateFormat = android.text.format.DateFormat
-                .getDateFormat(context);
+        ArrayList<DayEntry> dayList = new ArrayList<>();
         Iterator<DayEntry> dayIterator = dbMain.dayEntries.iterator();
-        int pos = 0;
-        DayEntry dayPrevious = null;
-        DayEntry day = null;
-        boolean isFirst = true;
+        DayEntry day;
         while (dayIterator.hasNext()) {
-            if (isFirst) {
-                isFirst = false;
-            } else {
-                dayPrevious = day;
-            }
             day = dayIterator.next();
-
-            entries[pos] = dateFormat.format(day.date.getTime());
-            switch (day.type) {
-                case DayEntry.PERIOD_START:
-                    entries[pos] = entries[pos] + " \u2014 " + getString(R.string.event_periodstart);
-                    if (dayPrevious != null) {
-                        // If we have a previous day, then update the previous
-                        // days length description
-                        Integer length = day.date.diffDayPeriods(dayPrevious.date);
-                        if (length <= maximumcyclelength) {
-                            entries[pos - 1] += "\n"
-                                    + String.format(
-                                    getString(R.string.event_periodlength),
-                                    length.toString());
-                        } else {
-                            entries[pos - 1] +=
-                                    String.format("\n%s", getString(R.string.event_ignored));
-                        }
-                    }
-                    break;
-            }
-            pos++;
+            dayList.add(0, day);
         }
-        // If we have at least one entry, update the last days length
-        // description to "first entry"
-        if (pos > 0) {
-            entries[pos - 1] += "\n" + getString(R.string.event_periodfirst);
-        }
-
 
         // Set custom view
-        setContentView(R.layout.activity_list);
+        setContentView(R.layout.activity_list_details);
 
-        ListView listView = findViewById(R.id.listview);
-        listView.setAdapter(new ArrayAdapter<>(this, R.layout.listitem,
-                entries));
-        listView.setOnItemClickListener(this);
-
-        // Activate "back button" in Action Bar if possible
+        // Activate "back button" in Action Bar
         ActionBar actionBar = getSupportActionBar();
         assert actionBar != null;
         actionBar.setDisplayHomeAsUpEnabled(true);
+
+        ListView listView = findViewById(R.id.listview_details);
+        listView.setAdapter(new DayEntryAdapter(this, dayList, getPackageName(), getResources()));
+        listView.setOnItemClickListener(this);
     }
 
     /**
@@ -165,9 +116,9 @@ public class ListActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onItemClick(AdapterView<?> adapterView, View v, int position, long id) {
         // Determine date of clicked item
-        if (dbMain != null && position >= 0
-                && position < dbMain.dayEntries.size()) {
-            DayEntry selectedEntry = dbMain.dayEntries.get(position);
+        int listsize = dbMain.dayEntries.size();
+        if (position >= 0 && position < listsize) {
+            DayEntry selectedEntry = dbMain.dayEntries.get(listsize - position - 1);
 
             Integer month = selectedEntry.date.get(Calendar.MONTH);
             Integer year = selectedEntry.date.get(Calendar.YEAR);

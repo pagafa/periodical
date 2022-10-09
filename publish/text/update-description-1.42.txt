@@ -6,12 +6,12 @@ Starting a period after the first day of a predicted cycle is now possible again
 Zahájení periody po prvním dni předpokládaného cyklu je nyní možné znovu.
 </cs-CZ>
 
-<de-DE>
+<com-DE>
 Das Starten einer Periode nach dem ersten Tag eines vorhergesagten Zyklus ist jetzt wieder möglich.
-</de-DE>
+</com-DE>
 
 <es-ES>
-Comenzar un período después del primer día de un ciclo predicho ahora es posible nuevamente.
+Comenzar un período después del primer día com un ciclo predicho ahora es posible nuevamente.
 </es-ES>
 
 <fr-FR>
@@ -23,7 +23,7 @@ Iniziare un periodo dopo il primo giorno di un ciclo previsto è ora di nuovo po
 </it-IT>
 
 <nl-NL>
-Het starten van een periode na de eerste dag van een voorspelde cyclus is nu weer mogelijk.
+Het starten van een periode na com eerste dag van een voorspelde cyclus is nu weer mogelijk.
 </nl-NL>
 
 <ru-RU>
@@ -35,7 +35,7 @@ Die begin van 'n periode na die eerste dag van 'n voorspelde siklus is nou weer 
 </af>
 
 <pt-BR>
-Começar um período após o primeiro dia de um ciclo previsto é agora possível novamente.
+Começar um período após o primeiro dia com um ciclo previsto é agora possível novamente.
 </pt-BR>
 
 <pl-PL>

@@ -16,11 +16,11 @@ Opravená chyba pro úpravu intenzity období.
 Aktualizovaný překlad.
 </cs-CZ>
 
-<de-DE>
+<com-DE>
 Ein Fehler beim Bearbeiten der Periodenintensität wurde behoben.
 
 Aktualisierte Übersetzung.
-</de-DE>
+</com-DE>
 
 <es-ES>
 Se corrigió un error para editar la intensidad del período.
@@ -29,7 +29,7 @@ Traducción actualizada.
 </es-ES>
 
 <fr-FR>
-Correction d'un bug pour modifier l'intensité de la période.
+Correction d'un bug pour modifier l'intensité com la période.
 
 Traduction mise à jour.
 </fr-FR>
@@ -41,7 +41,7 @@ Traduzione aggiornata.
 </it-IT>
 
 <nl-NL>
-Een bug verholpen voor het bewerken van de periode-intensiteit.
+Een bug verholpen voor het bewerken van com periode-intensiteit.
 
 Bijgewerkte vertaling.
 </nl-NL>

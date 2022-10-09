@@ -16,14 +16,13 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.arnowelzel.android.periodical;
+package com.appsbypablo.woman;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
+
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.MenuItem;
@@ -65,8 +64,6 @@ public class AboutActivity extends AppCompatActivity {
                         }
 
                         super.onPageFinished(view, url);
-                        view.loadUrl("javascript:replace('version', '" + BuildConfig.VERSION_NAME + "')");
-                        view.loadUrl("javascript:replace('year', '" + BuildConfig.VERSION_YEAR + "')");
                         view.loadUrl("javascript:replace('backupfolder','" + backupUriString + "')");
                         view.loadUrl("javascript:replace('translation','Albert Kannemeyer, Sébastien Gravier, Primokorn, Valerio Bozzolan, Ingrid Spangler, " +
                                 "Wjatscheslaw Stoljarski, Pander, Laura Arjona Reina, Naofumi Fukue, Tomasz Terka, " +

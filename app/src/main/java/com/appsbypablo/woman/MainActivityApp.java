@@ -16,7 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.arnowelzel.android.periodical;
+package com.appsbypablo.woman;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
@@ -29,6 +29,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import com.google.android.material.navigation.NavigationView;
+import com.huawei.hms.ads.AdParam;
+import com.huawei.hms.ads.BannerAdSize;
+import com.huawei.hms.ads.banner.BannerView;
 import com.yariksoffice.lingver.Lingver;
 
 import androidx.core.view.GravityCompat;
@@ -51,8 +54,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
-import static de.arnowelzel.android.periodical.PeriodicalDatabase.DayEntry.PERIOD_CONFIRMED;
-import static de.arnowelzel.android.periodical.PeriodicalDatabase.DayEntry.PERIOD_START;
+import static com.appsbypablo.woman.WomanDatabase.DayEntry.PERIOD_CONFIRMED;
+import static com.appsbypablo.woman.WomanDatabase.DayEntry.PERIOD_START;
 
 /**
  * The main activity of the app
@@ -95,7 +98,7 @@ public class MainActivityApp extends AppCompatActivity
     /* First day of the week (0 = sunday) */
     private int firstDayOfWeek;
 
-    private PeriodicalDatabase dbMain;
+    private WomanDatabase dbMain;
 
     /* Request codes for other activities */
     private static final int PICK_DATE = 1;       // Detail list: Date selected in detail list
@@ -207,7 +210,7 @@ public class MainActivityApp extends AppCompatActivity
         };
 
         // Setup database
-        dbMain = new PeriodicalDatabase(context);
+        dbMain = new WomanDatabase(context);
 
         // Restore preferences from database to make sure, we got the correct datatypes
         dbMain.restorePreferences();
@@ -223,6 +226,16 @@ public class MainActivityApp extends AppCompatActivity
 
         // Update calculated values
         dbMain.loadCalculatedData();
+
+        BannerView bannerView = findViewById(R.id.hw_banner_view);
+        // Set the ad unit ID and ad dimensions. "testw6vs28auh3" is a dedicated test ad unit ID.
+        bannerView.setAdId("testw6vs28auh3");
+        bannerView.setBannerAdSize(BannerAdSize.BANNER_SIZE_SMART);
+        // Set the refresh interval to 60 seconds.
+        bannerView.setBannerRefresh(60);
+        // Create an ad request to load an ad.
+        AdParam adParam = new AdParam.Builder().build();
+        bannerView.loadAd(adParam);
     }
 
     /**
@@ -308,10 +321,6 @@ public class MainActivityApp extends AppCompatActivity
 
             case R.id.options:
                 showOptions();
-                return true;
-
-            case R.id.exit:
-                finishAndRemoveTask();
                 return true;
         }
 
@@ -422,12 +431,15 @@ public class MainActivityApp extends AppCompatActivity
         // Output current year/month
         TextView displayDate = findViewById(R.id.displaydate);
         @SuppressLint("SimpleDateFormat") SimpleDateFormat dateFormat = new SimpleDateFormat("MMMM yyyy");
-        displayDate.setText(String.format("%s\nØ%d ↓%d ↑%d",
-                dateFormat.format(cal.getTime()),
+        displayDate.setText(String.format("%s",
+                dateFormat.format(cal.getTime())));
+        displayDate.setContentDescription(String.format("%s",
+                dateFormat.format(cal.getTime())));
+        TextView displayStats = findViewById(R.id.stats);
+        displayStats.setText(String.format("Ø%d ↓%d ↑%d",
                 dbMain.cycleAverage, dbMain.cycleShortest,
                 dbMain.cycleLongest));
-        displayDate.setContentDescription(String.format("%s - %s %d - %s %d - %s %d",
-                dateFormat.format(cal.getTime()),
+        displayStats.setContentDescription(String.format("%s %d - %s %d - %s %d",
                 getResources().getString(R.string.label_average_cycle), dbMain.cycleAverage,
                 getResources().getString(R.string.label_shortest_cycle), dbMain.cycleShortest,
                 getResources().getString(R.string.label_longest_cycle), dbMain.cycleLongest));
@@ -457,7 +469,7 @@ public class MainActivityApp extends AppCompatActivity
                 int day = i - firstDayOfWeek + 1;
                 cell.setText(String.format("%d", day));
                 cell.setVisibility(android.view.View.VISIBLE);
-                PeriodicalDatabase.DayEntry entry = dbMain.getEntry(cal);
+                WomanDatabase.DayEntry entry = dbMain.getEntry(cal);
 
                 boolean current = false;
 
@@ -485,7 +497,7 @@ public class MainActivityApp extends AppCompatActivity
 
                     if (!entry.notes.isEmpty()) cell.setNotes(true);
                 } else {
-                    cell.setType(PeriodicalDatabase.DayEntry.EMPTY);
+                    cell.setType(WomanDatabase.DayEntry.EMPTY);
                     cell.setDayofcycle(0);
                 }
 

@@ -16,20 +16,20 @@ Vyčištění nepoužívaných dat v interní databázi.
 Aktualizované překlady.
 </cs-CZ>
 
-<de-DE>
+<com-DE>
 Bereinigen nicht verwendeter Daten in der internen Datenbank.
 
 Aktualisierte Übersetzungen.
-</de-DE>
+</com-DE>
 
 <es-ES>
-Limpieza de datos no utilizados en la base de datos interna.
+Limpieza com datos no utilizados en la base com datos interna.
 
 Traducciones actualizadas.
 </es-ES>
 
 <fr-FR>
-Nettoyage des données inutilisées dans la base de données interne.
+Nettoyage des données inutilisées dans la base com données interne.
 
 Traductions mises à jour.
 </fr-FR>
@@ -41,7 +41,7 @@ Traduzioni aggiornate.
 </it-IT>
 
 <nl-NL>
-Opschonen van ongebruikte gegevens in de interne database.
+Opschonen van ongebruikte gegevens in com interne database.
 
 Bijgewerkte vertalingen.
 </nl-NL>
@@ -59,7 +59,7 @@ Opgedateerde vertalings.
 </af>
 
 <pt-BR>
-Limpando dados não utilizados no banco de dados interno.
+Limpando dados não utilizados no banco com dados interno.
 
 Traduções atualizadas.
 </pt-BR>

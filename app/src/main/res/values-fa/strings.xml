@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">Periodical</string>
     <string name="menuitem_help">راهنما</string>
     <string name="menuitem_about">درباره …</string>
     <string name="current_day">روز جاری</string>

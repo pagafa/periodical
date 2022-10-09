@@ -6,12 +6,12 @@ Added symptom, updated help text.
 Přidán příznak, aktualizovaný text nápovědy.
 </cs-CZ>
 
-<de-DE>
+<com-DE>
 Symptom hinzugefügt, Hilfetext aktualisiert.
-</de-DE>
+</com-DE>
 
 <es-ES>
-Síntoma agregado, texto de ayuda actualizado.
+Síntoma agregado, texto com ayuda actualizado.
 </es-ES>
 
 <fr-FR>
@@ -35,7 +35,7 @@ Bygevoeg simptoom, opgedateerde hulp teks.
 </af>
 
 <pt-BR>
-Adicionado sintoma, texto de ajuda atualizado.
+Adicionado sintoma, texto com ajuda atualizado.
 </pt-BR>
 
 <pl-PL>

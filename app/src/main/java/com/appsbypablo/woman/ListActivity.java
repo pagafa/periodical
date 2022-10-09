@@ -1,5 +1,5 @@
 /*
- * Periodical list with details activity
+ * Periodical list activity
  * Copyright (C) 2012-2020 Arno Welzel
  *
  * This code is free software: you can redistribute it and/or modify
@@ -16,33 +16,35 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.arnowelzel.android.periodical;
+package com.appsbypablo.woman;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.preference.PreferenceManager;
 import android.widget.ListView;
 
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Iterator;
 
-import de.arnowelzel.android.periodical.PeriodicalDatabase.DayEntry;
+import com.appsbypablo.woman.WomanDatabase.DayEntry;
 
 /**
- * Activity to handle the "List, details" command
+ * Activity to handle the "List" command
  */
-public class ListDetailsActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
+public class ListActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
     /**
      * Database for calendar data
      */
-    private PeriodicalDatabase dbMain;
+    private WomanDatabase dbMain;
 
     /**
      * Called when activity starts
@@ -54,29 +56,76 @@ public class ListDetailsActivity extends AppCompatActivity implements AdapterVie
         assert context != null;
         super.onCreate(savedInstanceState);
 
-        // Set up database and string array for the list
-        dbMain = new PeriodicalDatabase(context);
-        dbMain.loadRawDataWithDetails();
+        int maximumcyclelength;
 
-        ArrayList<DayEntry> dayList = new ArrayList<>();
-        Iterator<DayEntry> dayIterator = dbMain.dayEntries.iterator();
-        DayEntry day;
-        while (dayIterator.hasNext()) {
-            day = dayIterator.next();
-            dayList.add(0, day);
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
+        try {
+            maximumcyclelength = Integer.parseInt(preferences.getString("maximum_cycle_length", "183"));
+        } catch (NumberFormatException e) {
+            maximumcyclelength = 183;
         }
 
-        // Set custom view
-        setContentView(R.layout.activity_list_details);
+        // Set up database and string array for the list
+        dbMain = new WomanDatabase(context);
+        dbMain.loadRawData();
 
-        // Activate "back button" in Action Bar
+        String[] entries = new String[dbMain.dayEntries.size()];
+        java.text.DateFormat dateFormat = android.text.format.DateFormat
+                .getDateFormat(context);
+        Iterator<DayEntry> dayIterator = dbMain.dayEntries.iterator();
+        int pos = 0;
+        DayEntry dayPrevious = null;
+        DayEntry day = null;
+        boolean isFirst = true;
+        while (dayIterator.hasNext()) {
+            if (isFirst) {
+                isFirst = false;
+            } else {
+                dayPrevious = day;
+            }
+            day = dayIterator.next();
+
+            entries[pos] = dateFormat.format(day.date.getTime());
+            switch (day.type) {
+                case DayEntry.PERIOD_START:
+                    entries[pos] = entries[pos] + " \u2014 " + getString(R.string.event_periodstart);
+                    if (dayPrevious != null) {
+                        // If we have a previous day, then update the previous
+                        // days length description
+                        Integer length = day.date.diffDayPeriods(dayPrevious.date);
+                        if (length <= maximumcyclelength) {
+                            entries[pos - 1] += "\n"
+                                    + String.format(
+                                    getString(R.string.event_periodlength),
+                                    length.toString());
+                        } else {
+                            entries[pos - 1] +=
+                                    String.format("\n%s", getString(R.string.event_ignored));
+                        }
+                    }
+                    break;
+            }
+            pos++;
+        }
+        // If we have at least one entry, update the last days length
+        // description to "first entry"
+        if (pos > 0) {
+            entries[pos - 1] += "\n" + getString(R.string.event_periodfirst);
+        }
+
+
+        // Set custom view
+        setContentView(R.layout.activity_list);
+
+        ListView listView = findViewById(R.id.listview);
+        listView.setAdapter(new ArrayAdapter<>(this, R.layout.listitem,
+                entries));
+        listView.setOnItemClickListener(this);
+
+        // Activate "back button" in Action Bar if possible
         ActionBar actionBar = getSupportActionBar();
         assert actionBar != null;
         actionBar.setDisplayHomeAsUpEnabled(true);
-
-        ListView listView = findViewById(R.id.listview_details);
-        listView.setAdapter(new DayEntryAdapter(this, dayList, getPackageName(), getResources()));
-        listView.setOnItemClickListener(this);
     }
 
     /**
@@ -116,9 +165,9 @@ public class ListDetailsActivity extends AppCompatActivity implements AdapterVie
     @Override
     public void onItemClick(AdapterView<?> adapterView, View v, int position, long id) {
         // Determine date of clicked item
-        int listsize = dbMain.dayEntries.size();
-        if (position >= 0 && position < listsize) {
-            DayEntry selectedEntry = dbMain.dayEntries.get(listsize - position - 1);
+        if (dbMain != null && position >= 0
+                && position < dbMain.dayEntries.size()) {
+            DayEntry selectedEntry = dbMain.dayEntries.get(position);
 
             Integer month = selectedEntry.date.get(Calendar.MONTH);
             Integer year = selectedEntry.date.get(Calendar.YEAR);

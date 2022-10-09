@@ -18,3 +18,5 @@
 
 -keepclassmembers class **.R$* {public static <fields>;}
 -keep class **.R$*
+-keep class com.huawei.openalliance.ad.** { *; }
+-keep class com.huawei.hms.ads.** { *; }

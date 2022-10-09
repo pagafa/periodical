@@ -1,11 +1,12 @@
-package de.arnowelzel.android.periodical;
+package com.appsbypablo.woman;
 
 import android.app.Application;
 import android.content.SharedPreferences;
 
+import com.huawei.hms.ads.HwAds;
 import com.yariksoffice.lingver.Lingver;
 
-public class AppPeriodical extends Application {
+public class AppWoman extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
@@ -26,5 +27,7 @@ public class AppPeriodical extends Application {
         } else {
             Lingver.getInstance().setLocale(this, locale);
         }
+
+        HwAds.init(this);
     }
 }

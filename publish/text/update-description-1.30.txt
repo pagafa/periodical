@@ -14,18 +14,18 @@ Zobrazení kalendáře nyní zobrazí, zda se jedná o událost, příznak nebo 
 Překlad byl přidán do řečtiny.
 </cs-CZ>
 
-<de-DE>
+<com-DE>
 Ereignisse und Symptome sind jetzt separate Listen in den Details.
 
 Die Kalenderansicht zeigt nun an, ob ein Ereignis, ein Symptom oder eine Notiz vorliegt.
 
 Übersetzung auf Griechisch ergänzt.
-</de-DE>
+</com-DE>
 
 <es-ES>
 Los eventos y los síntomas ahora son listas separadas en los detalles.
 
-La vista de calendario ahora indicará si hay un evento, síntoma o nota.
+La vista com calendario ahora indicará si hay un evento, síntoma o nota.
 
 Añadida traducción griega.
 </es-ES>
@@ -33,9 +33,9 @@ Añadida traducción griega.
 <fr-FR>
 Les événements et les symptômes sont maintenant des listes séparées dans les détails.
 
-La vue de l'agenda indiquera maintenant s'il y a un événement, un symptôme ou une note.
+La vue com l'agenda indiquera maintenant s'il y a un événement, un symptôme ou une note.
 
-Ajout de la traduction grecque.
+Ajout com la traduction grecque.
 </fr-FR>
 
 <it-IT>
@@ -47,7 +47,7 @@ Aggiunta traduzione greca.
 </it-IT>
 
 <nl-NL>
-Gebeurtenissen en symptomen zijn nu afzonderlijke lijsten in de details.
+Gebeurtenissen en symptomen zijn nu afzonderlijke lijsten in com details.
 
 De kalenderweergave zal nu aangeven of er een gebeurtenis, symptoom of notitie is.
 
@@ -63,7 +63,7 @@ Griekse vertaling toegevoegd.
 </ru-RU>
 
 <af>
-Gebeurtenissen en symptomen zijn nu afzonderlijke lijsten in de details.
+Gebeurtenissen en symptomen zijn nu afzonderlijke lijsten in com details.
 
 De kalenderweergave zal nu aangeven of er een gebeurtenis, symptoom of notitie is.
 

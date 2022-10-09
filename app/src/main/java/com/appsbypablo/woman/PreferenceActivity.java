@@ -16,12 +16,11 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.arnowelzel.android.periodical;
+package com.appsbypablo.woman;
 
-import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.preference.EditTextPreference;
 import android.preference.ListPreference;
@@ -37,7 +36,7 @@ import com.yariksoffice.lingver.Lingver;
  * Activity to handle the "Preferences" command
  */
 public class PreferenceActivity extends AppCompatPreferenceActivity implements SharedPreferences.OnSharedPreferenceChangeListener {
-    private PeriodicalDatabase dbMain;
+    private WomanDatabase dbMain;
     private boolean localeChanged = false;
 
     /**
@@ -51,7 +50,7 @@ public class PreferenceActivity extends AppCompatPreferenceActivity implements S
         assert context != null;
 
         // We get/store preferences in the database
-        dbMain = new PeriodicalDatabase(context);
+        dbMain = new WomanDatabase(context);
 
         addPreferencesFromResource(R.xml.preferences);
         initSummary(getPreferenceScreen());
@@ -132,6 +131,7 @@ public class PreferenceActivity extends AppCompatPreferenceActivity implements S
         ActionBar actionBar = getSupportActionBar();
         assert actionBar != null;
         actionBar.setDisplayHomeAsUpEnabled(true);
+        getListView().setBackgroundColor(Color.rgb(213, 139, 221));
     }
 
     /**

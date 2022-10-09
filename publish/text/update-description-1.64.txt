@@ -10,9 +10,9 @@ Mümkün bir qəza düzəldilir.
 Oprava možného selhání.
 </cs-CZ>
 
-<de-DE>
+<com-DE>
 Behebung eines möglichen Absturzes.
-</de-DE>
+</com-DE>
 
 <es-ES>
 Arreglando un posible bloqueo.

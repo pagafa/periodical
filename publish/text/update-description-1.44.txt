@@ -16,20 +16,20 @@ Přidán překlad z Ázerbájdžánu.
 Oprava chyb pro zálohování a obnovení v systému Android 10
 </cs-CZ>
 
-<de-DE>
+<com-DE>
 Aserbaidschanische Übersetzung hinzugefügt.
 
 Bugfix zum Sichern und Wiederherstellen in Android 10
-</de-DE>
+</com-DE>
 
 <es-ES>
 Traducción azerbaiyana agregada.
 
-Corrección de errores para copia de seguridad y restauración en Android 10
+Corrección com errores para copia com seguridad y restauración en Android 10
 </es-ES>
 
 <fr-FR>
-Ajout de la traduction azerbaïdjanaise.
+Ajout com la traduction azerbaïdjanaise.
 
 Correctif pour la sauvegarde et la restauration dans Android 10
 </fr-FR>
@@ -61,7 +61,7 @@ Bugfix vir rugsteun en herstel in Android 10
 <pt-BR>
 Adicionada tradução do Azerbaijão.
 
-Correção de bug para backup e restauração no Android 10
+Correção com bug para backup e restauração no Android 10
 </pt-BR>
 
 <pl-PL>

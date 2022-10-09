@@ -22,28 +22,28 @@ Aktualizovaný seznam podrobností.
 Přidán tmavý styl pozadí pro navigační lištu.
 </cs-CZ>
 
-<de-DE>
+<com-DE>
 Absturz für Backups behoben, wenn der ausgewählte Speicherort das Schreiben von Daten nicht zulässt.
 
 Aktualisierte Detailliste.
 
 Dunkler Hintergrundstil für Navigationsleiste hinzugefügt.
-</de-DE>
+</com-DE>
 
 <es-ES>
-Se corrigió el bloqueo de las copias de seguridad cuando la ubicación de almacenamiento seleccionada no permite escribir datos.
+Se corrigió el bloqueo com las copias com seguridad cuando la ubicación com almacenamiento seleccionada no permite escribir datos.
 
-Lista de detalles actualizada.
+Lista com detalles actualizada.
 
-Estilo de fondo oscuro agregado para la barra de navegación.
+Estilo com fondo oscuro agregado para la barra com navegación.
 </es-ES>
 
 <fr-FR>
-Correction d'un crash pour les sauvegardes lorsque l'emplacement de stockage sélectionné ne permet pas d'écrire des données.
+Correction d'un crash pour les sauvegardes lorsque l'emplacement com stockage sélectionné ne permet pas d'écrire des données.
 
 Liste détaillée mise à jour.
 
-Ajout d'un style d'arrière-plan sombre pour la barre de navigation.
+Ajout d'un style d'arrière-plan sombre pour la barre com navigation.
 </fr-FR>
 
 <it-IT>
@@ -55,7 +55,7 @@ Aggiunto stile di sfondo scuro per la barra di navigazione.
 </it-IT>
 
 <nl-NL>
-Crash verholpen voor back-ups wanneer de geselecteerde opslaglocatie het schrijven van gegevens niet toestaat.
+Crash verholpen voor back-ups wanneer com geselecteerde opslaglocatie het schrijven van gegevens niet toestaat.
 
 Bijgewerkte detaillijst.
 
@@ -79,11 +79,11 @@ Donker agtergrondstyl bygevoeg vir die navigasiebalk.
 </af>
 
 <pt-BR>
-Corrigida falha nos backups quando o local de armazenamento selecionado não permite a gravação de dados.
+Corrigida falha nos backups quando o local com armazenamento selecionado não permite a gravação com dados.
 
-Lista de detalhes atualizada.
+Lista com detalhes atualizada.
 
-Adicionado estilo de fundo escuro para a barra de navegação.
+Adicionado estilo com fundo escuro para a barra com navegação.
 </pt-BR>
 
 <pl-PL>

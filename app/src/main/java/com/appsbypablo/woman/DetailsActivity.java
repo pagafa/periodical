@@ -16,7 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.arnowelzel.android.periodical;
+package com.appsbypablo.woman;
 
 import android.app.backup.BackupManager;
 import android.content.Context;
@@ -39,15 +39,15 @@ import android.widget.TextView;
 import java.text.DateFormat;
 import java.util.Locale;
 
-import static de.arnowelzel.android.periodical.PeriodicalDatabase.DayEntry.PERIOD_CONFIRMED;
-import static de.arnowelzel.android.periodical.PeriodicalDatabase.DayEntry.PERIOD_START;
+import static com.appsbypablo.woman.WomanDatabase.DayEntry.PERIOD_CONFIRMED;
+import static com.appsbypablo.woman.WomanDatabase.DayEntry.PERIOD_START;
 
 /**
  * Activity to handle the "Help" command
  */
 public class DetailsActivity extends AppCompatActivity implements View.OnClickListener, TextWatcher {
-    private PeriodicalDatabase dbMain;
-    private PeriodicalDatabase.DayEntry entry;
+    private WomanDatabase dbMain;
+    private WomanDatabase.DayEntry entry;
     private RadioButton buttonPeriodIntensity1;
     private RadioButton buttonPeriodIntensity2;
     private RadioButton buttonPeriodIntensity3;
@@ -76,7 +76,7 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
         int month = intent.getIntExtra("month", 1);
         int day = intent.getIntExtra("day", 1);
 
-        dbMain = new PeriodicalDatabase(context);
+        dbMain = new WomanDatabase(context);
         dbMain.loadCalculatedData();
         entry = dbMain.getEntryWithDetails(year, month, day);
 
@@ -227,7 +227,7 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
         switch (id) {
             case R.id.periodYes:
                 dbMain.addPeriod(entry.date);
-                entry.type = PeriodicalDatabase.DayEntry.PERIOD_START;
+                entry.type = WomanDatabase.DayEntry.PERIOD_START;
                 databaseChanged();
                 buttonPeriodIntensity1.setEnabled(true);
                 buttonPeriodIntensity2.setEnabled(true);
@@ -236,7 +236,7 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
                 break;
             case R.id.periodNo:
                 dbMain.removePeriod(entry.date);
-                entry.type = PeriodicalDatabase.DayEntry.EMPTY;
+                entry.type = WomanDatabase.DayEntry.EMPTY;
                 databaseChanged();
                 buttonPeriodIntensity1.setEnabled(false);
                 buttonPeriodIntensity2.setEnabled(false);

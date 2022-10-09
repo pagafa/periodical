@@ -1,1 +1,1 @@
-Un calendario menstrual con cálculo de días fértiles según Ogino Knaus.
+Un calendario menstrual con cálculo com días fértiles según Ogino Knaus.

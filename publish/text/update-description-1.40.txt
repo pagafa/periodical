@@ -10,22 +10,22 @@ Podrobnosti jsou nyní také uvedeny v prázdných dnech.
 Opraveny některé chyby pro úpravy a zobrazení podrobností.
 </cs-CZ>
 
-<de-DE>
+<com-DE>
 Details werden jetzt auch in leeren Tagen angezeigt.
 
 Einige Fehler bei der Bearbeitung und Detailansicht wurden behoben.
-</de-DE>
+</com-DE>
 
 <es-ES>
 Los detalles ahora también se indican en días vacíos.
 
-Se corrigieron algunos errores de edición y vista de detalle.
+Se corrigieron algunos errores com edición y vista com detalle.
 </es-ES>
 
 <fr-FR>
 Les détails sont maintenant aussi indiqués en jours vides.
 
-Correction de quelques bugs pour l'édition et la vue détaillée.
+Correction com quelques bugs pour l'édition et la vue détaillée.
 </fr-FR>
 
 <it-IT>
@@ -55,7 +55,7 @@ Sommige foute is reggestel vir redigering en detailaansig.
 <pt-BR>
 Os detalhes agora também são indicados em dias vazios.
 
-Corrigido alguns bugs para edição e visualização de detalhes.
+Corrigido alguns bugs para edição e visualização com detalhes.
 </pt-BR>
 
 <pl-PL>
