@@ -1,8 +1,6 @@
 # Periodical
 A calendar to track your menstruation and calculate possible fertile days
 
-Copyright (C) 2012-2021 Arno Welzel
-
 Translation:
 
 Albert Kannemeyer, Sébastien Gravier, Primokorn, Valerio Bozzolan, Ingrid Spangler,
@@ -32,18 +30,6 @@ according to Knaus-Ogino originally developed by Arno Welzel.
 
 WARNING: It is not recommended to use this calendar to avoid pregnancy!
 There are more accurate methods, like measuring the basal body temperature. 
-
-Source:  
-https://github.com/arnowelzel/periodical
-
-Download latest version at Google Play:  
-https://play.google.com/store/apps/details?id=pablo.android.periodical
-
-Download latest version at F-Droid:  
-https://f-droid.org/repository/browse/?fdid=pablo.android.periodical
-
-Download latest version as APK:  
-http://arnowelzel.com/download/Periodical.apk
 
 **Tools to used to build this project:**
 
